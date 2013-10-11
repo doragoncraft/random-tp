@@ -5,20 +5,15 @@
  import org.bukkit.ChatColor;
  import org.bukkit.Location;
  import org.bukkit.Material;
- import org.bukkit.World;
- import org.bukkit.block.Block;
  import org.bukkit.block.Sign;
  import org.bukkit.command.Command;
  import org.bukkit.command.CommandSender;
- import org.bukkit.configuration.file.FileConfiguration;
- import org.bukkit.configuration.file.FileConfigurationOptions;
  import org.bukkit.entity.Player;
  import org.bukkit.event.EventHandler;
  import org.bukkit.event.Listener;
  import org.bukkit.event.block.Action;
  import org.bukkit.event.block.SignChangeEvent;
  import org.bukkit.event.player.PlayerInteractEvent;
- import org.bukkit.plugin.PluginManager;
  import org.bukkit.plugin.java.JavaPlugin;
  
  public class RandomCoords extends JavaPlugin
