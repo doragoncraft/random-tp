@@ -1,0 +1,11 @@
+name: RandomCoords
+main: me.carl230690.dnbcommands.Main
+version: 1.0
+website: http://www.doragoncraft.com/
+author: carl230690
+description: >
+              Random Teleport On sign click
+commands:
+    rc:
+        description: Teleport To Random Coordinate
+        aliases: [randomcoordinate]
