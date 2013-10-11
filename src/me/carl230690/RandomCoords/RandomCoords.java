@@ -24,6 +24,10 @@
  public class RandomCoords extends JavaPlugin
    implements Listener
  {
+	 
+	 double x;
+	 double z;
+	 double y = 0;
    public void onEnable()
    {
      Bukkit.getPluginManager().registerEvents(this, this);
@@ -48,11 +52,13 @@
        {
          if (player.hasPermission("rc.use")) {
            sign.setLine(0, "[RC]");
-           Random r = new Random();
-           double range = getConfig().getDouble("MaxCoordinate");
-           double x = r.nextDouble() * range - 500.0D;
-           double z = r.nextDouble() * range - 500.0D;
-           double y = player.getWorld().getHighestBlockYAt((int)x, (int)z);
+           while (y==0) {
+             Random r = new Random();
+             double range = getConfig().getDouble("MaxCoordinate");
+             x = r.nextDouble() * range - 500.0D;
+             z = r.nextDouble() * range - 500.0D;
+             y = player.getWorld().getHighestBlockYAt((int)x, (int)z);
+           }
  
            Location loc = new Location(player.getWorld(), x, y, z);
            player.teleport(loc);
